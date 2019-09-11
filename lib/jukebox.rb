@@ -44,15 +44,17 @@ end
 
 def run
   puts "Please enter a command:"
-  command = gets.strip
+  command = ""
+  while command != "exit"
+    command = gets.strip
   
-  case command
-  when "list"
-    list(songs)
-  when "play"
-    play(songs)
-  when "help"
-    help()
-  when "exit"
-    exit_jukebox()
-  end
+    case command
+    when "list"
+      list(songs)
+    when "play"
+      play(songs)
+    when "help"
+      help()
+    when "exit"
+      exit_jukebox()
+    end
